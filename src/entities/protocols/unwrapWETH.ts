@@ -4,6 +4,7 @@ import { RoutePlanner, CommandType } from '../../utils/routerCommands'
 import { encodeInputTokenOptions, Permit2Permit } from '../../utils/inputTokens'
 import { Command, RouterTradeType, TradeConfig } from '../Command'
 import { ROUTER_AS_RECIPIENT, WETH_ADDRESS } from '../../utils/constants'
+import { ChainId } from '@vnaysn/jediswap-sdk-core'
 
 export class UnwrapWETH implements Command {
   readonly tradeType: RouterTradeType = RouterTradeType.UnwrapWETH
@@ -11,7 +12,7 @@ export class UnwrapWETH implements Command {
   readonly wethAddress: string
   readonly amount: BigNumberish
 
-  constructor(amount: BigNumberish, chainId: number, permit2?: Permit2Permit) {
+  constructor(amount: BigNumberish, chainId: ChainId, permit2?: Permit2Permit) {
     this.wethAddress = WETH_ADDRESS(chainId)
     this.amount = amount
 

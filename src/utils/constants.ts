@@ -1,3 +1,4 @@
+import { ChainId } from '@vnaysn/jediswap-sdk-core'
 import { BigNumber } from 'ethers'
 
 type ChainConfig = {
@@ -10,7 +11,7 @@ type ChainConfig = {
 
 export const NOT_SUPPORTED_ON_CHAIN = '0x0000000000000000000000000000000000000000'
 
-const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
+const CHAIN_CONFIGS: { [key: string]: ChainConfig } = {
   // mainnet
   [1]: {
     router: '0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD',
@@ -133,17 +134,17 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   },
 }
 
-export const UNIVERSAL_ROUTER_ADDRESS = (chainId: number): string => {
+export const UNIVERSAL_ROUTER_ADDRESS = (chainId: ChainId): string => {
   if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
   return CHAIN_CONFIGS[chainId].router
 }
 
-export const UNIVERSAL_ROUTER_CREATION_BLOCK = (chainId: number): number => {
+export const UNIVERSAL_ROUTER_CREATION_BLOCK = (chainId: ChainId): number => {
   if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
   return CHAIN_CONFIGS[chainId].creationBlock
 }
 
-export const WETH_ADDRESS = (chainId: number): string => {
+export const WETH_ADDRESS = (chainId: ChainId): string => {
   if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
 
   if (CHAIN_CONFIGS[chainId].weth == NOT_SUPPORTED_ON_CHAIN) throw new Error(`Chain ${chainId} does not have WETH`)
@@ -151,7 +152,7 @@ export const WETH_ADDRESS = (chainId: number): string => {
   return CHAIN_CONFIGS[chainId].weth
 }
 
-export const STETH_ADDRESS = (chainId: number): string => {
+export const STETH_ADDRESS = (chainId: ChainId): string => {
   if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
 
   if (CHAIN_CONFIGS[chainId].steth == NOT_SUPPORTED_ON_CHAIN)
@@ -160,7 +161,7 @@ export const STETH_ADDRESS = (chainId: number): string => {
   return CHAIN_CONFIGS[chainId].steth
 }
 
-export const WSTETH_ADDRESS = (chainId: number): string => {
+export const WSTETH_ADDRESS = (chainId: ChainId): string => {
   if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
 
   if (CHAIN_CONFIGS[chainId].wsteth == NOT_SUPPORTED_ON_CHAIN)

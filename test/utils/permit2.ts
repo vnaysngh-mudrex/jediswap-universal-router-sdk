@@ -3,6 +3,7 @@ import { AllowanceTransfer, PermitSingle } from '@uniswap/permit2-sdk'
 import { Permit2Permit } from '../../src/utils/inputTokens'
 import { PERMIT2_ADDRESS, ROUTER_ADDRESS } from './addresses'
 import { MAX_UINT160 } from '../../src/utils/constants'
+import { ChainId } from '@vnaysn/jediswap-sdk-core'
 
 const TEST_DEADLINE = '3000000000000'
 
@@ -10,7 +11,7 @@ const TEST_DEADLINE = '3000000000000'
 export async function generatePermitSignature(
   permit: PermitSingle,
   signer: Wallet,
-  chainId: number,
+  chainId: ChainId,
   permitAddress: string = PERMIT2_ADDRESS
 ): Promise<string> {
   const { domain, types, values } = AllowanceTransfer.getPermitData(permit, permitAddress, chainId)
@@ -20,7 +21,7 @@ export async function generatePermitSignature(
 export async function generateEip2098PermitSignature(
   permit: PermitSingle,
   signer: Wallet,
-  chainId: number,
+  chainId: ChainId,
   permitAddress: string = PERMIT2_ADDRESS
 ): Promise<string> {
   const sig = await generatePermitSignature(permit, signer, chainId, permitAddress)

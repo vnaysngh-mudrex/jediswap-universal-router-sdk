@@ -3,13 +3,14 @@ import { BigNumberish } from 'ethers'
 import { RoutePlanner, CommandType } from '../../utils/routerCommands'
 import { Command, RouterTradeType, TradeConfig } from '../Command'
 import { STETH_ADDRESS, NOT_SUPPORTED_ON_CHAIN } from '../../utils/constants'
+import { ChainId } from '@vnaysn/jediswap-sdk-core'
 
 export class UnwrapSTETH implements Command {
   readonly tradeType: RouterTradeType = RouterTradeType.UnwrapSTETH
   readonly recipient: string
   readonly amountMinimum: BigNumberish
 
-  constructor(recipient: string, amountMinimum: BigNumberish, chainId: number) {
+  constructor(recipient: string, amountMinimum: BigNumberish, chainId: ChainId) {
     this.recipient = recipient
     this.amountMinimum = amountMinimum
     invariant(STETH_ADDRESS(chainId) != NOT_SUPPORTED_ON_CHAIN, `STETH not supported on chain ${chainId}`)

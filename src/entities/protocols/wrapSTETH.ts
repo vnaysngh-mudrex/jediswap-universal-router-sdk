@@ -4,6 +4,7 @@ import { RoutePlanner, CommandType } from '../../utils/routerCommands'
 import { encodeInputTokenOptions, Permit2Permit } from '../../utils/inputTokens'
 import { Command, RouterTradeType, TradeConfig } from '../Command'
 import { CONTRACT_BALANCE, ROUTER_AS_RECIPIENT, STETH_ADDRESS } from '../../utils/constants'
+import { ChainId } from '@vnaysn/jediswap-sdk-core'
 
 export class WrapSTETH implements Command {
   readonly tradeType: RouterTradeType = RouterTradeType.WrapSTETH
@@ -12,7 +13,7 @@ export class WrapSTETH implements Command {
   readonly amount: BigNumberish
   readonly wrapAmount: BigNumberish
 
-  constructor(amount: BigNumberish, chainId: number, permit2?: Permit2Permit, wrapAmount?: BigNumberish) {
+  constructor(amount: BigNumberish, chainId: ChainId, permit2?: Permit2Permit, wrapAmount?: BigNumberish) {
     this.stethAddress = STETH_ADDRESS(chainId)
     this.amount = amount
     this.wrapAmount = wrapAmount ?? CONTRACT_BALANCE
