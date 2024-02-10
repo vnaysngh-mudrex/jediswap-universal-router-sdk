@@ -2489,6 +2489,22 @@
     tiny-invariant "^1.1.0"
     tiny-warning "^1.0.3"
 
+"@vnaysn/jediswap-sdk-v3@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@vnaysn/jediswap-sdk-v3/-/jediswap-sdk-v3-17.0.0.tgz#680e56de1a1eeaee695270da5ea17d3962ed52ca"
+  integrity sha512-ULOdg+I2n+2qP6z5p/4FJ8nXDH565TZgFl5iHFkRVqUMNacbDGafsoYD5A05J7mvhWrI83Qc1UvG06lWmqJ9BA==
+  dependencies:
+    "@ethersproject/abi" "^5.0.12"
+    "@ethersproject/solidity" "^5.0.9"
+    "@uniswap/sdk-core" "^4"
+    "@uniswap/swap-router-contracts" "^1.2.1"
+    "@uniswap/v3-periphery" "^1.1.1"
+    "@uniswap/v3-staker" "1.0.0"
+    "@vnaysn/jediswap-sdk-core" "^9.3.0"
+    starknet "^5.24.3"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+
 abab@^2.0.0:
   version "2.0.6"
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.6.tgz"
