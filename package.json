@@ -1,6 +1,6 @@
 {
   "name": "@vnaysn/jediswap-universal-router-sdk",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "sdk for integrating with the Universal Router contracts",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -55,7 +55,7 @@
     "@uniswap/universal-router": "1.5.1",
     "@uniswap/v2-sdk": "^3.2.0",
     "@uniswap/v3-sdk": "^3.10.0",
-    "@vnaysn/jediswap-router-sdk": "^11.0.0",
+    "@vnaysn/jediswap-router-sdk": "^13.0.0",
     "@vnaysn/jediswap-sdk-core": "^9.3.0",
     "@vnaysn/jediswap-sdk-v2": "^8.0.0",
     "@vnaysn/jediswap-sdk-v3": "^17.0.0",
