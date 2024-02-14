@@ -2461,6 +2461,18 @@
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
+"@vnaysn/jediswap-sdk-v2@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@vnaysn/jediswap-sdk-v2/-/jediswap-sdk-v2-10.0.0.tgz#40a4a2b208a76fce3594c382ab93cdc366b86282"
+  integrity sha512-cEAd2FbTc9cozUaG2E7G6yqUYwS80uueT93rBWajktofDtIAvHDVJfMHLWX6JvUkmIuuQKfYHHxkOjqkdjBqQg==
+  dependencies:
+    "@ethersproject/address" "^5.0.0"
+    "@ethersproject/solidity" "^5.0.0"
+    "@uniswap/sdk-core" "^4.0.7"
+    "@vnaysn/jediswap-sdk-core" "^10.3.0"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+
 "@vnaysn/jediswap-sdk-v2@^9.0.0":
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/@vnaysn/jediswap-sdk-v2/-/jediswap-sdk-v2-9.0.0.tgz#c4306ebda51dd6a396d40c6b1ff79b63131eebf9"
