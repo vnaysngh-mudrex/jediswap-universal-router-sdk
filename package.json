@@ -1,6 +1,6 @@
 {
   "name": "@vnaysn/jediswap-universal-router-sdk",
-  "version": "14.0.2",
+  "version": "14.0.3",
   "description": "Jediswap sdk for integrating with the Universal Router contracts",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -62,9 +62,5 @@
     "bignumber.js": "^9.0.2",
     "ethers": "^5.3.1"
   },
-  "repository": "https://github.com/vnaysngh-mudrex/jediswap-universal-router-sdk",
-  "bugs": {
-    "url": "https://github.com/Uniswap/universal-router-sdk/issues"
-  },
-  "homepage": "https://github.com/Uniswap/universal-router-sdk#readme"
+  "repository": "https://github.com/vnaysngh-mudrex/jediswap-universal-router-sdk"
 }
