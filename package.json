@@ -1,6 +1,6 @@
 {
   "name": "@vnaysn/jediswap-universal-router-sdk",
-  "version": "14.0.0",
+  "version": "14.0.1",
   "description": "Jediswap sdk for integrating with the Universal Router contracts",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
