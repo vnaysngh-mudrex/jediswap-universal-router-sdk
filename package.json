@@ -62,7 +62,7 @@
     "bignumber.js": "^9.0.2",
     "ethers": "^5.3.1"
   },
-  "repository": "https://github.com/vnaysngh-mudrex/jediswap-sdk-v2",
+  "repository": "https://github.com/vnaysngh-mudrex/jediswap-universal-router-sdk",
   "bugs": {
     "url": "https://github.com/Uniswap/universal-router-sdk/issues"
   },
